@@ -3,14 +3,20 @@ package util;
 public class Assert {
     public static void eq(int a, int b) {
         if (a != b) {
-            System.out.println("wrong!!! pls check line "+ getCallerLine());
+            System.out.println("wrong!!! pls check line " + getCallerLine());
+        }
+    }
+
+    public static void eq(boolean a, boolean b) {
+        if (a != b) {
+            System.out.println("wrong!!! pls check line " + getCallerLine());
         }
     }
 
     public static void eq(String a, String b) {
         if (a == null) {
             if (b != null) {
-                System.out.println("wrong!!!");
+                System.out.println("wrong!!! pls check line " + getCallerLine());
             }
             return;
         }
