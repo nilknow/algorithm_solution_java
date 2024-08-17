@@ -21,7 +21,8 @@ public class Assert {
             return;
         }
         if (!a.equals(b)) {
-            System.out.println("wrong!!!");
+            System.out.println("wrong!!! pls check line " + getCallerLine());
+            System.out.println("value a is " + a + " while value b is " + b);
         }
     }
 
